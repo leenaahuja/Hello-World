@@ -1,0 +1,16 @@
+{
+  "name": "node_web_server",
+  "version": "1.0.0",
+  "description": "Basic Node.js on Docker / K8s / Gardener ??",
+  "main": "src/server.js",
+  "scripts": {
+    "production": "node src/server.js",
+    "development": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

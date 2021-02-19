@@ -1,0 +1,17 @@
+apiVersion: skaffold/v2beta10
+kind: Config
+build:
+  artifacts:
+    - image: hello-world/v1
+      context: .
+  tagPolicy:
+    sha256: {}
+  local:
+    push: false  
+deploy:
+  helm:
+    releases:
+    - name: node-server-release
+      chartPath: nodeserverchart
+      namespace: nodeserver
+      recreatePods: true

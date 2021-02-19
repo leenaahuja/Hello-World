@@ -43,7 +43,7 @@ spec:
   stages {
     stage('Run gradle') {
       steps {
-        container('gradle') {
+        container('sapmachine') {
           sh 'gradle -version'
         }
 	container('node') {

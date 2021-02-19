@@ -47,9 +47,7 @@ spec:
           sh 'gradle -version'
         }
 	container('node') {
-          sh script: "npm run init"
-	  sh 'npm run init'
-	  sh script: "npm run build"
+		sh 'npm init'
         }
       }
     }

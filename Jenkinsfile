@@ -28,9 +28,7 @@ spec:
     tty: true
   - name: docker
     image: docker:18.09
-    env:
-     - name: NO_PROXY
-       value: docker.wdf.sap.corp
+    
     volumeMounts:
     - name: dockermount
       mountPath: /var/run/docker.sock

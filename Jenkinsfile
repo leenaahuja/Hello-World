@@ -41,11 +41,8 @@ spec:
     }
   }
   stages {
-    stage('Run gradle') {
+    stage('Build') {
       steps {
-        container('sapmachine') {
-          sh 'gradle -version'
-        }
 	container('node') {
 		sh 'npm install'
         }

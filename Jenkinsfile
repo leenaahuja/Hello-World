@@ -22,7 +22,7 @@ spec:
     - cat
     tty: true
   - name: node
-    image: 'docker.wdf.sap.corp:50000/cxm/angular:v7'
+    image: 'node:latest'
     command:
     - cat
     tty: true

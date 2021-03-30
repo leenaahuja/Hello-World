@@ -52,6 +52,15 @@ spec:
 		sh script: 'docker build -t hello-world/v1 .'
         }
       }
-    }	  
+    }
+    stage('Deploy Docker Image') {
+      steps {
+	container('docker') {
+		withDockerRegistry([ credentialsId: 'DOCKER_HUB_CRED', url: 'https://registry.hub.docker.com']){
+			sh script: 'docker push leenaahuja/hello-world:latest'
+		}
+        }
+      }
+    }
   }
 }

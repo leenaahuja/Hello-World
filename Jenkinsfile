@@ -48,7 +48,7 @@ spec:
     }
     stage('Build Docker Image') {
       steps {
-	container('node') {
+	container('docker') {
 		sh script: 'docker ps'
         }
       }

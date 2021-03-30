@@ -49,7 +49,7 @@ spec:
     stage('Build Docker Image') {
       steps {
 	container('node') {
-		sh 'docker build -t hello-world/v1 .'
+		sh script: 'docker build -t hello-world/v1 .'
         }
       }
     }	  

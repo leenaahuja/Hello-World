@@ -53,19 +53,19 @@ spec:
         }
       }
     }
-    stage('Deploy Docker Image') {
-      steps {
-	container('docker') {
+   // stage('Deploy Docker Image') {
+     // steps {
+	//container('docker') {
 		// sh script: 'docker push leenaahuja/hello-world:latest'
 		// withDockerRegistry([ credentialsId: 'DOCKER_HUB_CRED', url: 'https://registry.hub.docker.com']){
 		//	sh script: 'docker push leenaahuja/hello-world:latest'
 		// }
 		
-		docker.withRegistry( '', DOCKER_HUB_CRED ) {
-			sh script: 'docker push leenaahuja/pipeline-test:latest'
-		}
-        }
-      }
-    }
+	//	docker.withRegistry( '', DOCKER_HUB_CRED ) {
+	//		sh script: 'docker push leenaahuja/pipeline-test:latest'
+	//	}
+     //   }
+    //  }
+    //}
   }
 }

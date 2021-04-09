@@ -16,11 +16,6 @@ spec:
     hostPath:
      path: /var/run/docker.sock
   containers:
-  - name: sapmachine
-    image: gradle:4.7.0-jdk8-alpine
-    command:
-    - cat
-    tty: true
   - name: node
     image: 'node:latest'
     command:

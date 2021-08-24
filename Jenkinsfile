@@ -13,8 +13,7 @@ metadata:
 spec:
   volumes:
   - name: dockermount
-    hostPath:
-     path: /var/run/docker.sock
+    
   containers:
   - name: node
     image: 'node:latest'

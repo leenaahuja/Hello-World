@@ -11,7 +11,10 @@ apiVersion: v1
 kind: Pod
 metadata:
 spec:
-
+  volumes:
+  - name: dockermount
+    hostPath:
+     path: /var/run/docker.sock
     
   containers:
   - name: node
@@ -21,7 +24,10 @@ spec:
     tty: true
   - name: docker
     image: docker:18.09
-
+    
+    volumeMounts:
+    - name: dockermount
+      mountPath: /var/run/docker.sock
     command:
     - cat
     tty: true

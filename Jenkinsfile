@@ -15,6 +15,9 @@ spec:
   containers:
   - name: node
     image: 'node:latest'
+    command:
+    - cat
+    tty: true
     
 """
     }
